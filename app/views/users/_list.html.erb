@@ -1,0 +1,20 @@
+<div class="col-lg-4"> 
+	<h2>User info</h2>
+	<%= attachment_image_tag user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+	<%= user.name %>
+	<h3>Introduction</h3>
+	<%= user.introduction %>
+
+	<%= link_to "edit", edit_user_path(user.id) %>
+
+	<h2>New book</h2>
+	<%= form_for(book) do |f| %>
+		<h3>Title</h3>
+		<%= f.text_field :title %>
+
+		<h3>opinion</h3>
+		<%= f.text_field :body %>
+
+		<%= f.submit'Create book' %>
+	<% end %>
+</div>
