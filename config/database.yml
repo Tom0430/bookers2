@@ -22,6 +22,13 @@ test:
 
 production:
   <<:  *default
-  adapter:  postgresql
   encoding:  unicode
   pool:  5
+  database: meshiterro
+  adapter: mysql2
+  encoding: utf8mb4
+  charset: utf8mb4
+  collation: utf8mb4_general_ci
+  host: rds-mysql-server.c9f9ruawmnlu.us-east-2.rds.amazonaws.com
+  username: tom0430
+  password: 5589tttom
